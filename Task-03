@@ -1,0 +1,53 @@
+class Item:
+    def setData(self, name, detail, price):
+        self.name = name
+        self.detail = detail
+        self.price = price
+
+    def show(self):
+        print("Name:", self.name)
+        print("Detail:", self.detail)
+        print("Price:", self.price)
+    def add(self):
+        print(self.name, "added to basket.")
+
+    def remove(self):
+        print(self.name, "removed from basket.")
+class MP3(Item):
+    def setMP3(self, name, detail, price, artist, time):
+        self.setData(name, detail, price)
+        self.artist = artist
+        self.time = time
+    def play(self):
+        print("Playing", self.name, "by", self.artist)
+    def download(self):
+        print("Downloading", self.name)
+class DVD(Item):
+    def setDVD(self, name, detail, price, rating, time, actors):
+        self.setData(name, detail, price)
+        self.rating = rating
+        self.time = time
+        self.actors = actors
+
+    def trailer(self):
+        print("Playing trailer of", self.name)
+class Book(Item):
+    def setBook(self, name, detail, price, writer, pages, kind):
+        self.setData(name, detail, price)
+        self.writer = writer
+        self.pages = pages
+        self.kind = kind
+
+    def preview(self):
+        print("Previewing", self.name, "by", self.writer)
+m = MP3()
+m.setMP3("Calm Song", "A peaceful tune", 5, "Aryan Ashiq", "3:30")
+m.show()
+m.play()
+d = DVD()
+d.setDVD("Fast Car", "Action movie", 15, "PG-13", "2 hrs", "Tom and Lisa")
+d.add()
+d.trailer()
+b = Book()
+b.setBook("Secret Door", "Mystery story", 10, "Sara", 250, "Mystery")
+b.preview()
