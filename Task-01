@@ -1,0 +1,20 @@
+import math
+
+class Circle:
+    def setRadius(self, r):
+        self.r = r
+
+    def area(self):
+        return math.pi * self.r * self.r
+
+    def perimeter(self):
+        return 2 * math.pi * self.r
+
+c = Circle()
+r = float(input("Enter the radius: "))
+c.setRadius(r)
+
+print("The area is:", c.area())
+print("The perimeter is:", c.perimeter())
+
+
