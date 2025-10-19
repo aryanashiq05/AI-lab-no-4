@@ -1,0 +1,19 @@
+class Power:
+    def calculate(self, x, n):
+        result = 1
+        if n > 0:
+            for i in range(n):
+                result = result * x
+        elif n < 0:
+            for i in range(-n):
+                result = result * x
+            result = 1 / result
+        else:
+            result = 1
+        return result
+
+p = Power()
+x = float(input("Enter a number: "))
+n = int(input("Enter its power: "))
+
+print("The answer is:", p.calculate(x, n))
